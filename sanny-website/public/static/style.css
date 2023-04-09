@@ -24,6 +24,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
     height: 100%;
     width: 100%;
     background: var(--bg);
@@ -33,6 +34,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, p, span {
@@ -62,6 +67,24 @@ span.bold {
     transform: translateY(-50%);
 }
 
+.mr-1 {
+    margin-right: 12px;
+}
+
+.mr-0 {
+    margin-right: 8px;
+}
+
+.r-pos {
+    position: relative;
+}
+
+.a-pos {
+    position: absolute;
+}
+
+
+
 header {
     position: sticky;
     top: 0;
@@ -72,6 +95,108 @@ header {
     box-shadow: 0 1px 4px rgb(0 0 0 / 5%);
 }
 
+/* header icons */
+
+.h-icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+    filter: opacity(70%); 
+}
+
+.h-icon:hover {
+    filter: opacity(90%);
+}
+
+.h-icon.cart {
+    background-image: url('./icons/shopping-cart.png');
+    cursor: pointer;
+}
+
+.h-icon.account {
+    background-image: url('./icons/user.png');
+}
+
+span.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span.red {
+    color: #ca1818;
+}
+
+span.w500 {
+    font-weight: 500;
+}
+
+.mb-0 {
+    margin-bottom: 6px;
+}
+
+.cart-widget {
+    width: 400px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 888;
+    background-color: #fff;
+    top: 50px;
+    right: 0;
+    border-radius: 10px;
+}
+
+.cart-removeall {
+    font-size: 12px;
+    align-self: center;
+}
+
+.cart-ball {
+    background: #ff2a2a;
+    left: -2px;
+    top: -2px;
+    z-index: 2;
+    text-align: center;
+    max-width: 13px;
+    min-width: 13px;
+    max-height: 13px;
+    min-height: 13px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.cart-ball .item-count {
+    font-size: 8px;
+    margin-top: 1.6px;
+    font-weight: bold;
+}
+.cart-ball .item-count span {
+    color: #fff;
+    
+}
+
+
+
+.user-account {
+    cursor: pointer;
+}
+
+.user-account span {
+    color: #6f6f6f!important;
+}
+
+.user-account:hover .h-icon.account {
+    filter: opacity(90%);
+}
+
+.user-account:hover span {
+    color: #3d3d3d!important;
+}
+
+.user-account span {
+    font-size: 14px;
+    font-weight: 500;
+}
 
 .shadow {
     box-shadow: 0 0 8px #5e607a11;
@@ -410,23 +535,42 @@ input:hover {
 .menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .menu .link {
     text-transform: uppercase;
     font-size: 16px;
+    height: fit-content;
     font-weight: 500;
-    padding: 10px 16px;
+    padding: 10px 10px;
     cursor: pointer;
+    display: block;
 }
 
-.menu .link:hover span {
-    color: var(--btn-text-color)
+.menu .link:hover span, .menu .link.active span {
+    color: var(--btn-text-color);
 }
 
-.header-alignment {
+.menu .link.active span {
+    cursor: default;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.dflex {
     display: flex;
     flex-direction: row;
+}
+
+.no-shrink {
+    flex-shrink:  0;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 .little-txt-btn {
@@ -659,3 +803,7 @@ button:hover {
     opacity: 1;
     transition: opacity 200ms ease-in-out, transform 400ms ease-in-out;
 }
+
+
+
+/* cart style */
