@@ -1,0 +1,261 @@
+.main-banner {
+    padding: 139px 0;
+    /* background-color: linear-gradient(45deg, var(--col-5), #242e38); */
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(45deg, var(--col-5), #242e38), url(./images/banner-bg.avif);
+    
+    background-position: center;
+
+    background-blend-mode: overlay;
+    margin-bottom: 60px;
+    margin-top: 61px;
+}
+
+.little-text {
+    font-size: 13px;
+}
+
+.col-white {
+    color: #fff;
+}
+
+.col-little-white {
+    color: #eaeaea;
+}
+
+.banner-description {
+    width: 40%;
+    margin: 0 auto;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.rounded-button {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.rounded-button.col-2 button {
+    border: 3px solid #8461da;
+    color: #4d3290!important;
+    background: linear-gradient(45deg, #3f45b717, #6d4b9400);
+
+    padding: 7px 29px;
+}
+
+.rounded-button button {
+    border-radius: 20px;
+    padding: 10px 29px;
+    background: linear-gradient(45deg, #3f45b7, #6d4b94);
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgb(0 0 0 / 19%);
+}
+
+.section-title {
+    padding: 30px 0;
+    font-size: 18px;
+}
+
+.section-title h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #151515;
+}
+
+.slider-action {
+    position: relative;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0,0,0,.1);
+}
+
+.slider-action:hover .icon:not(.disabled) {
+    filter:opacity(.5);
+}
+
+.slider-action .icon {
+    background: url('./icons/back.png?2');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    filter: opacity(.3);
+    
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.slider-action.back {
+    margin-right: 20px;
+}
+
+
+.slider-action.forward {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .slider-action.back {
+        margin-right: -30px;
+    }
+    
+    
+    .slider-action.forward {
+        margin-left: -30px;
+    }
+}
+
+.slider-action.forward .icon {
+    transform: translate(-50%, -50%) rotateZ(180deg);
+    left: 55%;
+}
+
+.slider-action.back .icon {
+    
+}
+
+.self-stretch {
+    align-self: stretch;
+}
+
+.slider-item {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.slider-item:hover {
+    border-color: #cfcfcf;
+}
+
+.box-covering {
+    position: relative;
+    height: 0;
+    padding-top: 100%;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+}
+
+.box-covering:hover::after {
+    background: #fff;
+}
+
+.box-covering::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .1;
+    top: 0;
+    left: 0;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.box-covering img {
+    width: 100%;
+    object-position: center center;
+    object-fit: contain;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.box-covering:hover .play-btn-circle {
+    opacity: 1;
+    transition: opacity 100ms;
+}
+
+.slider-item-list {
+    position: relative;
+    z-index: 9;
+    transition: transform 200ms;
+}
+
+.bottom-separator {
+    margin-bottom: 0;
+}
+
+.vertical-separator {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.simple-box {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 13px;
+}
+
+
+.shadow-more {
+    box-shadow: 0 0 8px #5e607a11;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.f-size-18 {
+    font-size: 18px;
+}
+
+.merch-item {
+    width: 25%;
+}
+
+.merch-info {
+    line-height: 20px;
+}
+
+.merch-info .text {
+    font-size: 16px;
+}
+
+.merch-info .text.title {
+    margin-top: 10px
+}
+
+.new-tag {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateZ(10deg);
+    z-index: 99;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #0000006b;
+    padding: 2px 8px;
+    box-shadow: 0 0 6px rgba(0,0,0,.6);
+    border: 2px solid rgba(0,0,0,.1);
+}
+
+.new-tag span {
+    color: #fff;
+}
+
